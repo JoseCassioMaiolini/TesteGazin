@@ -1,0 +1,28 @@
+﻿USE master 
+GO
+
+CREATE DATABASE gazin_teste
+GO
+
+USE gazin_teste
+GO
+
+CREATE TABLE [dbo].[Desenvolvedores]
+(
+	[Id] INT NOT NULL PRIMARY KEY IDENTITY(1, 1), 
+    [Nome] VARCHAR(50) NULL, 
+    [Sexo] CHAR(9) NULL, 
+    [Idade] INT NULL, 
+    [Hobby] VARCHAR(100) NULL, 
+    [DataNascimento] DATE NULL
+)
+GO
+
+
+SET IDENTITY_INSERT [dbo].[Desenvolvedores] ON
+INSERT INTO [dbo].[Desenvolvedores] ([Id], [Nome], [Sexo], [Idade], [Hobby], [DataNascimento]) VALUES (1, N'Luana Ribeiro', N'Feminino', 25, N'Artista de rua', N'1996-06-27')
+INSERT INTO [dbo].[Desenvolvedores] ([Id], [Nome], [Sexo], [Idade], [Hobby], [DataNascimento]) VALUES (2, N'Leonardo', N'Masculino', 26, N'Games, Filmes, livros...', N'1995-04-13')
+INSERT INTO [dbo].[Desenvolvedores] ([Id], [Nome], [Sexo], [Idade], [Hobby], [DataNascimento]) VALUES (4, N'Ze', N'Masculino', 25, N'Games, Filmes, livros...', N'1995-11-14')
+INSERT INTO [dbo].[Desenvolvedores] ([Id], [Nome], [Sexo], [Idade], [Hobby], [DataNascimento]) VALUES (5, N'Gustavo Yuri', N'Masculino', 24, N'Games, Filmes, livros...', N'1997-02-23')
+SET IDENTITY_INSERT [dbo].[Desenvolvedores] OFF
+GO

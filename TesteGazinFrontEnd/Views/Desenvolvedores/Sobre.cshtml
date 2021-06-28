@@ -1,0 +1,20 @@
+﻿@model TesteGazinFrontEnd.Models.Desenvolvedor
+
+@{
+    ViewData["Title"] = "Sobre";
+}
+
+<form asp-action="Sobre">
+    <div class="text-center">
+        <h1 class="display-4">Sobre</h1>
+        <h3>Projeto de Avaliação da Gazin!</h3>
+        <p>Projeto de Avaliação desenvolvido por José Cássio Maiolini Filho.</p>
+        <p>Com o intuito de demostrar habilidades e pratica de programação para avaliação.</p>
+        <p>Para ter acesso ao enunciado, Clique <a href="https://gitlab.com/felipe.furtuoso538/pontential-crud">aqui</a>.</p>
+    </div>
+</form>
+
+
+    @section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    }
